@@ -1,0 +1,52 @@
+﻿@model WebClinicaMVC.Models.ProfissionalSpecialty
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delete ProfissionalSpecialty</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h3 class="text-danger">Are you sure you want to delete this?</h3>
+        <div>
+            <h4>ProfissionalSpecialty Details</h4>
+            <hr />
+            <dl class="row">
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Profissional)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Profissional.Id)
+                </dd>
+                <dt class="col-sm-3">
+                    @Html.DisplayNameFor(model => model.Specialty)
+                </dt>
+                <dd class="col-sm-9">
+                    @Html.DisplayFor(model => model.Specialty.Name)
+                </dd>
+            </dl>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="IdProfissional" />
+                <input type="hidden" asp-for="IdProfissional" />
+                <div class="form-group">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

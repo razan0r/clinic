@@ -1,0 +1,51 @@
+﻿@model IEnumerable<WebClinicaMVC.Models.ProfissionalSpecialty>
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta Name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProfissionalSpecialtys</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <div class="container mt-4">
+        <h1>ProfissionalSpecialtys</h1>
+        <p>
+            <a asp-action="Create" class="btn btn-primary">Create New</a>
+        </p>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.First().Profissional)</th>
+                    <th>@Html.DisplayNameFor(model => model.First().Specialty)</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Profissional.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Specialty.Name)</td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.IdProfissional" class="btn btn-warning btn-sm">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.IdProfissional" class="btn btn-info btn-sm">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.IdProfissional" class="btn btn-danger btn-sm">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

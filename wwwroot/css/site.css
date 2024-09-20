@@ -1,0 +1,60 @@
+body {
+    background-color: #F8F1; /* Cream */
+    color: #4A4A4A; /* Charcoal Gray */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #70587C; /* Muted Mauve */
+}
+
+.navbar-brand,
+.nav-link {
+    color: #FFFFFF; /* White */
+}
+
+    .nav-link:hover {
+        color: #D8C4E0; /* Pale Lavender */
+    }
+
+.btn-primary {
+    background-color: #70587C; /* Muted Mauve */
+    border-color: #70587C;
+}
+
+    .btn-primary:hover {
+        background-color: #D8C4E0; /* Pale Lavender */
+        border-color: #D8C4E0;
+    }
+
+.highlight,
+.cta {
+    color: #9B9B77; /* Muted Olive */
+}
+
+.subtle {
+    color: #E5A9A1; /* Soft Pink */
+}
+
+footer {
+    background-color: #70587C; /* Muted Mauve */
+    color: #FFFFFF; /* White */
+}
+
+    footer a {
+        color: #FFFFFF; /* White */
+    }
+
+        footer a:hover {
+            color: #D8C4E0; /* Pale Lavender */
+        }
+
+.btn:focus,
+.btn:active:focus,
+.btn-link.nav-link:focus,
+.form-control:focus,
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #9B9B77; /* Muted Olive */
+}
